@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Security-Policy" 
-        content="default-src * data: http: http://127.0.0.1:8080/ http://127.0.0.1/ http://127.0.0.1/w 'unsafe-eval' 'eval-inline' 'unsafe-inline'; script-src * 'unsafe-eval' 'eval-inline' 'unsafe-inline' data: http: http://127.0.0.1:8080/ http://127.0.0.1/ http://127.0.0.1/w;">
-        <!-- Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/ -->
-    </head>
-    <body>
-        This page is incredibly ugly! It will eventually be a tiny vulnerable website to test the payloads and XSServe's functionalities.
-        <br>Some field : <input id="test1" name="test1-name" type="text"></input><br>
-        <img src="https://miro.medium.com/v2/resize:fit:600/0*fh4xG1Q8VFy0kIBU.jpg">
-        <script src='http://127.0.0.1:8080'></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" 
+        content="default-src * data: http: https: http://127.0.0.1:8080/ http://127.0.0.1/ 'unsafe-eval' 'unsafe-inline'; 
+                 script-src * 'unsafe-eval' 'unsafe-inline' data: http: https: http://127.0.0.1:8080/ http://127.0.0.1/;">
+    <title>Vulnerable Test Page</title>
+</head>
+<body>
+    <h1>Welcome to the Vulnerable Test Page</h1>
+    <p>This page is incredibly ugly! It will eventually be a tiny vulnerable website to test the payloads and XSServe's functionalities.</p>
+    <label for="test1">Some field:</label>
+    <input id="test1" name="test1-name" type="text">
+    <br>
+    <img src="https://miro.medium.com/v2/resize:fit:600/0*fh4xG1Q8VFy0kIBU.jpg" alt="Example Image">
+    <script src="http://127.0.0.1:8080"></script>
+</body>
 </html>
